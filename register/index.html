@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Page title -->
-  <title>Welcome to MedCap REDCap</title>
+  <title>Welcome to MedCap</title>
 
-  <!-- Custom favicon and app icon (placed in root directory) -->
+  <!-- Custom favicon and app icon -->
   <link rel="icon" href="../icon.png" />
   <link rel="apple-touch-icon" href="../icon.png" />
-
-  <!-- Meta for web app display on mobile -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="MedCap" />
 
   <style>
-    /* Simple loading screen styling */
     body {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
@@ -26,20 +24,38 @@
       font-family: sans-serif;
       background-color: #f8f9fa;
     }
+
     h1 {
       font-size: 1.5rem;
-      color: #444;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>Loading your secure REDCap link...</h1>
+  <h1>Click the button to enter your secure REDCap survey</h1>
+  <button onclick="redirectToSurvey()">Go to Survey</button>
 
   <script>
-    // Redirect to your user's REDCap survey link after 2 seconds
-    setTimeout(function () {
+    // Redirect only when the user clicks the button
+    function redirectToSurvey() {
       window.location.href = "https://redcap.uth.tmc.edu/surveys/?s=7CM8K7JEE9XD8HYN";
-    }, 2000); // 2000 milliseconds = 2 seconds
+    }
   </script>
 </body>
 </html>
