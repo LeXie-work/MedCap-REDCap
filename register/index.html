@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MedCap REDCap</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Icon for app shortcut -->
-  <link rel="icon" href="/MedCap-REDCap/icon.png" />
-  <link rel="apple-touch-icon" href="/MedCap-REDCap/icon.png" />
+  <!-- Page title -->
+  <title>Welcome to MedCap REDCap</title>
+
+  <!-- Custom favicon and app icon (placed in root directory) -->
+  <link rel="icon" href="../icon.png" />
+  <link rel="apple-touch-icon" href="../icon.png" />
+
+  <!-- Meta for web app display on mobile -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="MedCap REDCap" />
-  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="MedCap" />
+
+  <style>
+    /* Simple loading screen styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <h2>MedCap Survey</h2>
-  <p>Click the button below to start your REDCap survey.</p>
-  <button onclick="startSurvey()">Start Survey</button>
+  <h1>Loading your secure REDCap link...</h1>
 
   <script>
-    // Function to open the REDCap survey
-    function startSurvey() {
-      const url = 'https://redcap.uth.tmc.edu/surveys/?s=7CM8K7JEE9XD8HYN';
-      window.location.href = url;
-    }
+    // Redirect to your user's REDCap survey link after 2 seconds
+    setTimeout(function () {
+      window.location.href = "https://redcap.uth.tmc.edu/surveys/?s=7CM8K7JEE9XD8HYN";
+    }, 2000); // 2000 milliseconds = 2 seconds
   </script>
 </body>
 </html>
