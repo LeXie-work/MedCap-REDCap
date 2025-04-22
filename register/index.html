@@ -5,7 +5,7 @@
   <title>MedCap REDCap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- App 图标声明 -->
+  <!-- Icon for app shortcut -->
   <link rel="icon" href="/MedCap-REDCap/icon.png" />
   <link rel="apple-touch-icon" href="/MedCap-REDCap/icon.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,17 +13,16 @@
   <meta name="mobile-web-app-capable" content="yes" />
 </head>
 <body>
-  <h2>Loading REDCap survey...</h2>
-  <p>If you are not redirected, <a id="link" href="#">click here</a>.</p>
+  <h2>MedCap Survey</h2>
+  <p>Click the button below to start your REDCap survey.</p>
+  <button onclick="startSurvey()">Start Survey</button>
 
   <script>
-    const url = 'https://redcap.uth.tmc.edu/surveys/?s=7CM8K7JEE9XD8HYN';
-    document.getElementById('link').href = url;
-
-    // 延迟跳转，给浏览器时间记录这个页面
-    setTimeout(() => {
+    // Function to open the REDCap survey
+    function startSurvey() {
+      const url = 'https://redcap.uth.tmc.edu/surveys/?s=7CM8K7JEE9XD8HYN';
       window.location.href = url;
-    }, 1500); // 1.5 秒延迟
+    }
   </script>
 </body>
 </html>
